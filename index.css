@@ -7,6 +7,7 @@
 body{
     background-color: black;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -17,6 +18,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 5vh;
+    transform: scale(1); /* Adjust the scale value as needed */
+    transform-origin: center center; /* Ensure it scales from the center */
 }
 .backwall{
     display: flex;
@@ -68,9 +71,14 @@ body{
   }
 
 @media (max-width:1000px) {
+    body{
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+    }
     .wall{
         height: 100%;
-        width: 300%;
+        width: 100%;
     }
     .change{
        width: 60vw;
@@ -84,7 +92,7 @@ body{
     .change h3 {
         font-size:clamp(20px,3.5vw,5vw) ;
         letter-spacing: 0.3vw;
-        margin-top: -1vh;
+        margin-top: -5%;
     }
     .change h5 {
         font-size:clamp(15px,3vw,4vw) ;
